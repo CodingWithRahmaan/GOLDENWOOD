@@ -10,6 +10,7 @@ import Testimonials from './components/comp4.jsx';
 import Proj2 from './components/comp5.jsx';
 import ExploreSection from './components/comp6.jsx';
 import Registeration from './components/comp7.jsx';
+import Footer from './components/comp8.jsx'
 
 function App() {
   return (
@@ -22,10 +23,12 @@ function App() {
       <Proj2 />
       <ExploreSection />
       <Registeration />
+      <Footer />
     </>
 
   );
 }
 
 export default App;
+
 
