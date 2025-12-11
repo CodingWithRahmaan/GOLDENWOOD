@@ -5,6 +5,7 @@ import Business from "../assets/businessmen1.png";
 import Folder from "../assets/folder.png";
 import vector2 from "../assets/Vector.png";
 
+
 const ExploreSection = () => {
   const cards = [
     {
@@ -39,12 +40,14 @@ const ExploreSection = () => {
             EXPLORE, CONNECT AND ENGAGE WITH US
           </h2>
 
-          <button className="hidden items-center gap-3 rounded-full border border-gray-300 px-6 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-black hover:bg-gray-100 sm:inline-flex">
-            LEARN MORE
-            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#c79a63] text-xs text-white">
-              ×
-            </span>
-          </button>
+         
+           <button className="w-35 flex items-center gap-1 lg:gap-2 xl:gap-3 bg-gradient-to-r from-[#b68a56] to-[#d5b37a] text-white font-semibold px-3 md:px-4 lg:px-5 xl:px-6 py-1 md:py-1.5 lg:py-1.5 xl:py-2 rounded-full shadow-md text-xs whitespace-nowrap hover:opacity-90 transition">
+                      <span className="hidden lg:inline">READ MORE</span>
+
+                      <span className="w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 bg-white rounded-full flex items-center justify-center flex-shrink-0">
+                        <img src={vector2} alt="Arrow Icon" className="w-1.5 h-1.5 lg:w-2 lg:h-2" />
+                      </span>
+                    </button>
         </div>
 
         {/* Cards row */}

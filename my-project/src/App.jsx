@@ -9,6 +9,7 @@ import ProjectsSection from './components/comp3.jsx';
 import Testimonials from './components/comp4.jsx';
 import Proj2 from './components/comp5.jsx';
 import ExploreSection from './components/comp6.jsx';
+import Registeration from './components/comp7.jsx';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Testimonials />
       <Proj2 />
       <ExploreSection />
+      <Registeration />
     </>
 
   );
