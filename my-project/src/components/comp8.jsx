@@ -10,6 +10,7 @@ import Prop2 from "../assets/prop2.jpg";
 import Prop3 from "../assets/prop3.png";
 import Prop4 from "../assets/prop4.png";
 import Prop5 from "../assets/prop5.png";
+import vector2 from "../assets/Vector.png"; 
 
 const blogItems = [
   {
@@ -77,12 +78,13 @@ const BlogsPage = () => {
             </h2>
 
             {/* read more button */}
-            <button className="mt-5 inline-flex items-center gap-3 rounded-full bg-[#c79a63] px-6 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-white">
-              READ MORE
-              <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-xs text-[#c79a63]">
-                ×
-              </span>
-            </button>
+              <button className="w-35 flex items-center gap-1 lg:gap-2 xl:gap-3 bg-gradient-to-r from-[#b68a56] to-[#d5b37a] text-white font-semibold px-3 md:px-4 lg:px-5 xl:px-6 py-1 md:py-1.5 lg:py-1.5 xl:py-2 rounded-full shadow-md text-xs whitespace-nowrap hover:opacity-90 transition">
+                      <span className="hidden lg:inline">READ MORE</span>
+
+                      <span className="w-4 h-4 lg:w-5 lg:h-5 xl:w-6 xl:h-6 bg-white rounded-full flex items-center justify-center flex-shrink-0">
+                        <img src={vector2} alt="Arrow Icon" className="w-1.5 h-1.5 lg:w-2 lg:h-2" />
+                      </span>
+                    </button>
           </div>
 
           {/* right side list */}
