@@ -20,15 +20,15 @@ const reasons = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="w-full h-170 bg-white">
-      {/* top spacing + heading */}
-      <div className="max-w-5xl mx-auto px-4 pt-12 pb-10 text-center">
+    <section className="w-full bg-white py-20">
+      {/* HEADING */}
+      <div className="max-w-5xl mx-auto px-4 text-center mb-14">
         <p className="flex items-center justify-center gap-2 text-xs tracking-[0.25em] uppercase text-[#b89663]">
           <span className="h-1.5 w-1.5 rounded-full bg-[#b89663]" />
           Why Choose Us?
         </p>
 
-        <h2 className="mt-4 text-3xl md:text-4xl font-semibold tracking-[0.18em] uppercase">
+        <h2 className="mt-4 text-3xl sm:text-4xl font-semibold tracking-[0.18em] uppercase">
           <span className="text-black">YOUR VISION, OUR </span>
           <span className="text-[#b89663]">PROMISE</span>
         </h2>
@@ -39,47 +39,60 @@ const WhyChooseUs = () => {
         </p>
       </div>
 
-      {/* background image + floating cards */}
-      <div className="relative">
-        {/* background strip with external URL */}
+      {/* BACKGROUND IMAGE */}
+      <div
+        className="
+          relative w-full
+          min-h-[520px] sm:min-h-[580px] md:min-h-[420px]
+          bg-center bg-cover bg-no-repeat
+          flex items-end
+        "
+        style={{
+          backgroundImage:
+            "url('https://binghattiweb.imgix.net/aquarise-horizontal.webp?auto=format,compress&q=65')",
+        }}
+      >
+        {/* OVERLAY */}
+        <div className="absolute inset-0 bg-black/60" />
+
+        {/* CARDS */}
         <div
           className="
-            h-82 w-full 
-            bg-center bg-cover bg-no-repeat bg-black/800
+            relative z-10
+            w-full max-w-5xl mx-auto px-4
+            pb-16
+            md:-translate-y-20
           "
-          style={{
-            backgroundImage: 
-              "url('https://binghattiweb.imgix.net/aquarise-horizontal.webp?auto=format,compress&q=65')",
-          }}
-        />
-
-        {/* floating cards (same as Figma) */}
-        <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-          <div className="pointer-events-auto flex flex-col md:flex-row gap-4 md:gap-6 px-4 max-w-5xl w-full justify-center">
+        >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 place-items-center">
             {reasons.map((item) => (
               <div
                 key={item.id}
-                className="flex-1 bg-[#0a0a0a] text-white rounded-md shadow-xl px-6 py-6 md:py-8 translate-y-10 md:translate-y-12"
+                className="
+                  w-full
+                  bg-[#0a0a0a] text-white
+                  rounded-md shadow-xl
+                  px-6 py-7
+                  min-h-[210px]
+                  flex flex-col items-center text-center
+                "
               >
-                {/* small icon box */}
-                <div className="mb-6 h-9 w-9 flex items-center justify-center rounded-sm bg-[#2b2419]">
+                {/* ICON */}
+                <div className="mb-5 h-9 w-9 flex items-center justify-center rounded-sm bg-[#2b2419]">
                   <span className="text-[#d3a86b] text-xl leading-none">✶</span>
                 </div>
 
-                <h3 className="text-[11px] md:text-xs tracking-[0.22em] uppercase mb-4">
+                <h3 className="text-xs tracking-[0.22em] uppercase mb-3">
                   {item.title}
                 </h3>
 
-                <p className="text-xs md:text-[13px] text-gray-300 leading-relaxed">
+                <p className="text-sm text-gray-300 leading-relaxed">
                   {item.text}
                 </p>
               </div>
             ))}
           </div>
         </div>
-
-        {/* bottom spacer so cards clip na hon */}
-        <div className="h-16 md:h-20" />
       </div>
     </section>
   );
