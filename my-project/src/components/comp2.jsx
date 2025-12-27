@@ -25,20 +25,22 @@ export default function ExcellenceSection() {
 
         {/* RIGHT CONTENT AREA */}
         <div className="pt-6 sm:pt-10 lg:pt-0 lg:pl-20 text-center lg:text-left">
-          <h2 className="text-xs sm:text-sm font-semibold text-gray-500 mb-2 tracking-wide">
-            • EXPERTISE
+          <h2 className="text-xs sm:text-sm font-semibold text-[#b68a56] mb-2 tracking-[0.1em]">
+            • Expertise
           </h2>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
             12 YEARS OF <br />
-            <span className="text-[#b68a56] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold">
+            <span className="text-[#b68a56] text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-bold">
               EXCELLENCE
             </span>
           </h1>
 
           <p className="text-gray-600 leading-relaxed mt-4 mb-6 text-sm sm:text-base">
-            Established in 2013, Golden Woods Development has the power to transform lives and redefine the essence of modern living.
-            With every project, Golden Woods Development aims to deliver more than buildings—we deliver dreams, built on trust, integrity, and perfection.
+           Established in 2013, Golden Woods Development has the power to transform lives and redefine the essence of modern living. Each project is not just a construction venture but a vision brought to life—an opportunity to create spaces that inspire and elevate the many communities we have worked in.
+           <br />
+           <br />
+          With every project, Golden Woods Development aims to deliver more than buildings—we deliver dreams, built on the foundation of trust, integrity, and a relentless pursuit of perfection.
           </p>
 
           {/* Cards */}

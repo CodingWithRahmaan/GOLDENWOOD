@@ -12,28 +12,22 @@ export default function Navbar() {
           max-w-[1600px] mx-auto
           flex items-center justify-between
           px-4 sm:px-6 md:px-8 lg:px-10 xl:px-16
-          h-14 sm:h-16 md:h-18 lg:h-20
+          h-14 sm:h-16 lg:h-20 lg:justify-evenly
         "
       >
-        {/* Left: Logo + Navigation */}
+        {/* LEFT */}
         <div className="flex items-center gap-3 md:gap-6">
           <img
             src={logo}
             alt="Golden Woods Logo"
-            className="
-              h-8
-              sm:h-10
-              md:h-12
-              lg:h-14
-              xl:h-16
-            "
+            className="h-8 sm:h-10 md:h-12 lg:h-14"
           />
 
-          {/* Desktop navigation */}
+          {/* DESKTOP NAV */}
           <nav
             className="
               hidden lg:flex items-center
-              gap-6 xl:gap-8
+              gap-6 xl:gap-10
               ml-8 xl:ml-12
               text-white
               text-[11px] xl:text-sm
@@ -49,27 +43,19 @@ export default function Navbar() {
 
             <div className="flex items-center gap-1 cursor-pointer hover:text-[#d5b37a]">
               <span>Properties</span>
-              <span className="text-white text-xs">▾</span>
+              <span className="text-xs">▾</span>
             </div>
 
-            <span className="cursor-pointer hover:text-[#d5b37a]">
-              Communities
-            </span>
-            <span className="cursor-pointer hover:text-[#d5b37a]">
-              Media
-            </span>
-            <span className="cursor-pointer hover:text-[#d5b37a]">
-              Blogs
-            </span>
-            <span className="cursor-pointer hover:text-[#d5b37a]">
-              Contact
-            </span>
+            <span className="cursor-pointer hover:text-[#d5b37a]">Communities</span>
+            <span className="cursor-pointer hover:text-[#d5b37a]">Media</span>
+            <span className="cursor-pointer hover:text-[#d5b37a]">Blogs</span>
+            <span className="cursor-pointer hover:text-[#d5b37a]">Contact</span>
           </nav>
         </div>
 
-        {/* Right Side */}
+        {/* RIGHT */}
         <div className="flex items-center gap-3">
-          {/* Desktop right content */}
+          {/* DESKTOP */}
           <div
             className="
               hidden lg:flex items-center gap-4
@@ -80,7 +66,7 @@ export default function Navbar() {
               <span className="opacity-80 hidden xl:inline">Call:</span>
               <a
                 href="tel:+08412345688"
-                className="relative cursor-pointer hover:text-[#d5b37a]"
+                className="relative hover:text-[#d5b37a]"
               >
                 +(084) 123-456 88
                 <span className="absolute -bottom-0.5 left-0 w-full h-0.5 bg-white" />
@@ -92,88 +78,66 @@ export default function Navbar() {
                 flex items-center gap-2
                 bg-gradient-to-r from-[#b68a56] to-[#d5b37a]
                 text-white font-semibold
-                px-4 xl:px-6
-                py-1.5 xl:py-2
+                px-4 xl:px-6 py-1.5 xl:py-2
                 rounded-full shadow-md
                 text-[11px] xl:text-sm
-                whitespace-nowrap
                 hover:opacity-90 transition
               "
             >
               <span className="hidden lg:inline">BECOME CHANNEL PARTNER</span>
               <span className="lg:hidden">PARTNER</span>
-              <span
-                className="
-                  w-4 h-4 xl:w-5 xl:h-5
-                  bg-white rounded-full
-                  flex items-center justify-center flex-shrink-0
-                "
-              >
-                <img
-                  src={vector1}
-                  alt="Arrow Icon"
-                  className="w-2 h-2"
-                />
+
+              <span className="w-4 h-4 xl:w-5 xl:h-5 bg-white rounded-full flex items-center justify-center">
+                <img src={vector1} alt="" className="w-2 h-2" />
               </span>
             </button>
           </div>
 
-          {/* Mobile Hamburger */}
+          {/* HAMBURGER */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="
-              lg:hidden text-white
-              text-2xl
-            "
+            className="lg:hidden text-white text-2xl px-2"
           >
             ☰
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu Dropdown */}
+      {/* MOBILE MENU */}
       {mobileMenuOpen && (
         <div className="lg:hidden bg-[#38536d] border-t border-[#4a6a85]">
-          <nav
-            className="
-              flex flex-col gap-1
-              text-white
-              p-3
-              text-[13px]
-              font-medium
-            "
-          >
-            <span className="cursor-pointer hover:text-[#d5b37a] py-1.5">
-              Home
-            </span>
-            <span className="cursor-pointer hover:text-[#d5b37a] py-1.5">
-              Properties
-            </span>
-            <span className="cursor-pointer hover:text-[#d5b37a] py-1.5">
-              Communities
-            </span>
-            <span className="cursor-pointer hover:text-[#d5b37a] py-1.5">
-              Media
-            </span>
-            <span className="cursor-pointer hover:text-[#d5b37a] py-1.5">
-              Blogs
-            </span>
-            <span className="cursor-pointer hover:text-[#d5b37a] py-1.5">
-              Contact
-            </span>
-            <hr className="border-[#4a6a85] my-1.5" />
+          <nav className="flex flex-col text-white p-4 text-sm font-medium">
+            {[
+              "Home",
+              "Properties",
+              "Communities",
+              "Media",
+              "Blogs",
+              "Contact",
+            ].map((item) => (
+              <span
+                key={item}
+                className="py-2 cursor-pointer hover:text-[#d5b37a]"
+              >
+                {item}
+              </span>
+            ))}
+
+            <hr className="border-[#4a6a85] my-3" />
+
             <a
               href="tel:+08412345688"
-              className="cursor-pointer hover:text-[#d5b37a] py-1.5"
+              className="py-2 hover:text-[#d5b37a]"
             >
               Call: +(084) 123-456 88
             </a>
+
             <button
               className="
+                mt-3 w-full
                 bg-gradient-to-r from-[#b68a56] to-[#d5b37a]
                 text-white font-semibold
-                px-3 py-1.5
-                rounded-full text-xs mt-2 w-full
+                py-2 rounded-full text-xs
               "
             >
               BECOME PARTNER
